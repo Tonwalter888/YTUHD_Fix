@@ -64,7 +64,18 @@ extern BOOL FixPlayback();
 @interface iOSGuardManager : NSObject
 @end
 
+@interface YTIPlayerConfig : GPBMessage
+- (YTIMediaCommonConfig *)mediaCommonConfig;
+- (YTIHamplayerConfig *)hamplayerConfig;
+@end
 
+@interface YTIMediaCommonConfig : GPBMessage
+- (void)setUseServerDrivenAbr:(BOOL)arg;
+@end
+
+@interface YTIHamplayerConfig (YTUHD)
+- (int)renderViewType;
+@end
 
 __attribute__((unused))
 static void forceRenderViewTypeBase(YTIHamplayerConfig *hamplayerConfig) {
@@ -634,19 +645,6 @@ static NSURLSession *YTUHDPlayerSession(void) {
 
 - (void)stopLoading {}
 
-@end
-
-@interface YTIPlayerConfig : GPBMessage
-- (YTIMediaCommonConfig *)mediaCommonConfig;
-- (YTIHamplayerConfig *)hamplayerConfig;
-@end
-
-@inteface YTIMediaCommonConfig : GPBMessage
-- (void)setUseServerDrivenAbr:(BOOL)arg;
-@end
-
-@interface YTIHamplayerConfig (YTUHD)
-- (int)renderViewType;
 @end
 
 %hook MLPlayerPoolImpl
