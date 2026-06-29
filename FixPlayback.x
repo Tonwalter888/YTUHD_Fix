@@ -65,11 +65,6 @@ extern BOOL FixPlayback();
 @interface iOSGuardManager : NSObject
 @end
 
-@interface YTIPlayerConfig : GPBMessage
-- (YTIMediaCommonConfig *)mediaCommonConfig;
-- (YTIHamplayerConfig *)hamplayerConfig;
-@end
-
 @interface YTIMediaCommonConfig (YTUHD)
 - (void)setUseServerDrivenAbr:(BOOL)arg;
 @end
@@ -652,13 +647,12 @@ static NSURLSession *YTUHDPlayerSession(void) {
 - (id)acquirePlayerForVideo:(MLVideo *)video playerConfig:(MLInnerTubePlayerConfig *)playerConfig stickySettings:(MLPlayerStickySettings *)stickySettings latencyLogger:(id)latencyLogger reloadContext:(id)reloadContext mediaPlayerResources:(id)mediaPlayerResources recompositeProvider:(id)recompositeProvider {
     YTUHDDump(video, playerConfig);
     @try {
-        YTIPlayerConfig *pc  = [playerConfig valueForKey:@"_playerConfig"];
-        YTIMediaCommonConfig *mcc = pc.mediaCommonConfig;
+        YTIMediaCommonConfig *mcc = playerConfig.mediaCommonConfig;
         [mcc setUseServerDrivenAbr:NO];
         // Force AVPlayer mode: TVHTML5 response provides hlsManifestUrl.
         // renderViewType=2 makes the pool create MLAVPlayer (not HAMPlayer),
         // which uses hlsManifestUrl directly — no DASH / no spc= required.
-        YTIHamplayerConfig *hc = pc.hamplayerConfig;
+        YTIHamplayerConfig *hc = playerConfig.hamplayerConfig;
         hc.renderViewType = 2;
     } @catch (...) {}
     return %orig;
@@ -683,13 +677,12 @@ static NSURLSession *YTUHDPlayerSession(void) {
 - (id)acquirePlayerForVideo:(MLVideo *)video playerConfig:(MLInnerTubePlayerConfig *)playerConfig stickySettings:(MLPlayerStickySettings *)stickySettings latencyLogger:(id)latencyLogger reloadContext:(id)reloadContext mediaPlayerResources:(id)mediaPlayerResources recompositeProvider:(id)recompositeProvider {
     YTUHDDump(video, playerConfig);
     @try {
-        YTIPlayerConfig *pc  = [playerConfig valueForKey:@"_playerConfig"];
-        YTIMediaCommonConfig *mcc = pc.mediaCommonConfig;
+        YTIMediaCommonConfig *mcc = playerConfig.mediaCommonConfig;
         [mcc setUseServerDrivenAbr:NO];
         // Force AVPlayer mode: TVHTML5 response provides hlsManifestUrl.
         // renderViewType=2 makes the pool create MLAVPlayer (not HAMPlayer),
         // which uses hlsManifestUrl directly — no DASH / no spc= required.
-        YTIHamplayerConfig *hc = pc.hamplayerConfig;
+        YTIHamplayerConfig *hc = playerConfig.hamplayerConfig;
         hc.renderViewType = 2;
     } @catch (...) {}
     return %orig;
