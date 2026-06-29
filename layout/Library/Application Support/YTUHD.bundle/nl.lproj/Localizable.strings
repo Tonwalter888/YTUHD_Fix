@@ -1,0 +1,34 @@
+"RESTART_BAR" = "Wijzigingen in deze instellingen vereisen een herstart van de app om van kracht te worden.";
+"USE_VP9_OR_AV1" = "Gebruik VP9 en AV1";
+"USE_VP9_OR_AV1_DESC" = "Schakel VP9- en AV1-codecs in die video's tot 4K-resolutie ondersteunen.";
+
+"USE_VP9" = "Gebruik VP9";
+"USE_VP9_DESC" = "Schakel de VP9-codec in die video's tot 4K-resolutie ondersteunt.";
+
+"USE_AV1" = "Gebruik AV1";
+"USE_AV1_DESC" = "Schakel de AV1-codec in die video's tot 4K-resolutie ondersteunt.";
+
+"CODEC" = "Codec";
+"CODEC_DESC" = "U kunt de codec kiezen die u in video's wilt gebruiken.";
+"BOTH" = "Beide";
+
+"DECODE_THREADS" = "Decodeer-threads";
+"DECODE_THREADS_DESC" = "Aantal threads gebruikt voor VP9-videodecodering. Hogere waarden kunnen de videoweergave verbeteren, maar kunnen ook het batterijverbruik verhogen.";
+"DECODE_THREADS_DEFAULT_VALUE" = "Standaardwaarde";
+
+"OP_BAR" = "VP9-optimalisaties";
+"SKIP_LOOP_FILTER" = "Loop-filter overslaan";
+"LOOP_FILTER_OPTIMIZATION" = "Loop-filteroptimalisatie";
+"ROW_THREADING" = "Rij-threading";
+
+"AUTO_RELOAD" = "Vastgelopen video's automatisch opnieuw laden";
+"AUTO_RELOAD_DESC" = "Als deze optie is ingeschakeld, wordt een vastgelopen video elke 2,5 seconden automatisch opnieuw geladen.";
+"RELOAD_BUTTON" = "Herlaadknop toevoegen";
+"RELOAD_BUTTON_DESC" = "Voegt een herlaadknop toe aan de video-overlay. Je kunt de knop configureren in de YTVideoOverlay tweak.";
+"POSITION" = "Positie van de herlaadknop";
+
+"EXTRA" = "Extra functies";
+"FIX_PLAYBACK" = "Afspeelproblemen oplossen";
+"FIX_PLAYBACK_DESC" = "Los videoweergaveproblemen op voor sommige gebruikers. Als u dit inschakelt, worden VP9 en AV1 uitgeschakeld. Bovendien is de videokwaliteit beperkt tot 1080p en wordt HDR verwijderd.";
+"HDR" = "HDR uitschakelen";
+"HDR_DESC" = "Schakelt HDR uit in sommige video's.";

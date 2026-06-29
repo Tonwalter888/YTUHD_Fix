@@ -1,0 +1,34 @@
+"RESTART_BAR" = "Näiden asetusten muutokset edellyttävät sovelluksen uudelleenkäynnistystä tullakseen voimaan.";
+"USE_VP9_OR_AV1" = "Käytä VP9:ää ja AV1:tä";
+"USE_VP9_OR_AV1_DESC" = "Ota käyttöön VP9- ja AV1-koodekit, jotka tukevat jopa 4K-resoluution videoita.";
+
+"USE_VP9" = "Käytä VP9:ää";
+"USE_VP9_DESC" = "Ota käyttöön VP9-koodekki, joka tukee jopa 4K-resoluution videoita.";
+
+"USE_AV1" = "Käytä AV1:tä";
+"USE_AV1_DESC" = "Ota käyttöön AV1-koodekki, joka tukee jopa 4K-resoluution videoita.";
+
+"CODEC" = "Koodekki";
+"CODEC_DESC" = "Voit valita koodekin, jota haluat käyttää videoissa.";
+"BOTH" = "Molemmat";
+
+"DECODE_THREADS" = "Dekoodaussäikeet";
+"DECODE_THREADS_DESC" = "VP9-videon dekoodaukseen käytettävien säikeiden määrä. Suuremmat arvot voivat parantaa videon toiston suorituskykyä, mutta voivat myös lisätä akun kulutusta.";
+"DECODE_THREADS_DEFAULT_VALUE" = "Oletusarvo";
+
+"OP_BAR" = "VP9-optimoinnit";
+"SKIP_LOOP_FILTER" = "Ohita silmukkasuodatin";
+"LOOP_FILTER_OPTIMIZATION" = "Silmukkasuodattimen optimointi";
+"ROW_THREADING" = "Rivisäikeistys";
+
+"AUTO_RELOAD" = "Lataa jumittuneet videot automaattisesti uudelleen";
+"AUTO_RELOAD_DESC" = "Kun tämä asetus on käytössä, jumittunut video ladataan automaattisesti uudelleen 2,5 sekunnin välein.";
+"RELOAD_BUTTON" = "Lisää uudelleenlatauspainike";
+"RELOAD_BUTTON_DESC" = "Lisää uudelleenlatauspainikkeen videon overlayhin, voit määrittää painikkeen YTVideoOverlay-tweakissa.";
+"POSITION" = "Uudelleenlatauspainikkeen sijainti";
+
+"EXTRA" = "Lisäominaisuudet";
+"FIX_PLAYBACK" = "Korjaa toisto-ongelmat";
+"FIX_PLAYBACK_DESC" = "Korjaa videon toisto-ongelmia joillakin käyttäjillä. Tämän kytkeminen päälle poistaa VP9:n ja AV1:n käytöstä. Lisäksi videon laatu on rajoitettu 1080p:hen ja HDR poistetaan.";
+"HDR" = "Poista HDR käytöstä";
+"HDR_DESC" = "Poistaa HDR:n käytöstä joissakin videoissa.";

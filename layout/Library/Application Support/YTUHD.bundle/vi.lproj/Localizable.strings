@@ -1,0 +1,34 @@
+"RESTART_BAR" = "Bất kỳ thay đổi nào đối với các cài đặt này đều yêu cầu khởi động lại ứng dụng để có hiệu lực.";
+"USE_VP9_OR_AV1" = "Sử dụng VP9 và AV1";
+"USE_VP9_OR_AV1_DESC" = "Bật codec VP9 và AV1 hỗ trợ video lên đến độ phân giải 4K.";
+
+"USE_VP9" = "Sử dụng VP9";
+"USE_VP9_DESC" = "Bật codec VP9 hỗ trợ video lên đến độ phân giải 4K.";
+
+"USE_AV1" = "Sử dụng AV1";
+"USE_AV1_DESC" = "Bật codec AV1 hỗ trợ video lên đến độ phân giải 4K.";
+
+"CODEC" = "Codec";
+"CODEC_DESC" = "Bạn có thể chọn codec bạn muốn sử dụng trong video.";
+"BOTH" = "Cả hai";
+
+"DECODE_THREADS" = "Luồng giải mã";
+"DECODE_THREADS_DESC" = "Số lượng luồng được sử dụng để giải mã video VP9. Giá trị cao hơn có thể cải thiện hiệu suất phát lại video nhưng cũng có thể làm tăng mức tiêu thụ pin.";
+"DECODE_THREADS_DEFAULT_VALUE" = "Giá trị mặc định";
+
+"OP_BAR" = "Tối ưu hóa VP9";
+"SKIP_LOOP_FILTER" = "Bỏ qua bộ lọc vòng lặp";
+"LOOP_FILTER_OPTIMIZATION" = "Tối ưu hóa bộ lọc vòng lặp";
+"ROW_THREADING" = "Tạo luồng theo hàng";
+
+"AUTO_RELOAD" = "Tự động tải lại video bị treo";
+"AUTO_RELOAD_DESC" = "Bật tùy chọn này sẽ tự động tải lại video bị treo mỗi 2.5 giây.";
+"RELOAD_BUTTON" = "Thêm nút tải lại";
+"RELOAD_BUTTON_DESC" = "Thêm nút tải lại vào lớp phủ video, bạn có thể cấu hình nút trong tweak YTVideoOverlay.";
+"POSITION" = "Vị trí nút tải lại";
+
+"EXTRA" = "Các tính năng bổ sung";
+"FIX_PLAYBACK" = "Khắc phục sự cố phát lại";
+"FIX_PLAYBACK_DESC" = "Khắc phục sự cố phát lại video cho một số người dùng. Bật tính năng này sẽ vô hiệu hóa VP9 và AV1. Ngoài ra, chất lượng video bị giới hạn ở 1080p và HDR bị xóa.";
+"HDR" = "Tắt HDR";
+"HDR_DESC" = "Tắt HDR trong một số video.";

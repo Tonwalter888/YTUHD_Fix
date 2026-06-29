@@ -1,0 +1,34 @@
+"RESTART_BAR" = "Wszelkie zmiany w tych ustawieniach wymagają ponownego uruchomienia aplikacji, aby zaczęły obowiązywać.";
+"USE_VP9_OR_AV1" = "Użyj VP9 i AV1";
+"USE_VP9_OR_AV1_DESC" = "Włącz kodeki VP9 i AV1, które obsługują filmy w rozdzielczości do 4K.";
+
+"USE_VP9" = "Użyj VP9";
+"USE_VP9_DESC" = "Włącz kodek VP9, który obsługuje filmy w rozdzielczości do 4K.";
+
+"USE_AV1" = "Użyj AV1";
+"USE_AV1_DESC" = "Włącz kodek AV1, który obsługuje filmy w rozdzielczości do 4K.";
+
+"CODEC" = "Kodek";
+"CODEC_DESC" = "Możesz wybrać kodek, którego chcesz używać w filmach.";
+"BOTH" = "Oba";
+
+"DECODE_THREADS" = "Wątki dekodowania";
+"DECODE_THREADS_DESC" = "Liczba wątków używanych do dekodowania wideo VP9. Wyższe wartości mogą poprawić wydajność odtwarzania wideo, ale mogą też zwiększyć zużycie baterii.";
+"DECODE_THREADS_DEFAULT_VALUE" = "Wartość domyślna";
+
+"OP_BAR" = "Optymalizacje VP9";
+"SKIP_LOOP_FILTER" = "Pomiń filtr pętli";
+"LOOP_FILTER_OPTIMIZATION" = "Optymalizacja filtra pętli";
+"ROW_THREADING" = "Wątkowanie wierszy";
+
+"AUTO_RELOAD" = "Automatyczne przeładowanie zaciętych filmów";
+"AUTO_RELOAD_DESC" = "Po włączeniu tej opcji zacięty film będzie automatycznie przeładowywany co 2,5 sekundy.";
+"RELOAD_BUTTON" = "Dodaj przycisk przeładowania";
+"RELOAD_BUTTON_DESC" = "Dodaje przycisk przeładowania do nakładki wideo. Możesz skonfigurować przycisk w tweak YTVideoOverlay.";
+"POSITION" = "Pozycja przycisku przeładowania";
+
+"EXTRA" = "Dodatkowe funkcje";
+"FIX_PLAYBACK" = "Napraw problemy z odtwarzaniem";
+"FIX_PLAYBACK_DESC" = "Naprawia problemy z odtwarzaniem wideo dla niektórych użytkowników. Włączenie tej opcji wyłączy VP9 i AV1. Dodatkowo jakość wideo jest ograniczona do 1080p, a HDR zostaje usunięty.";
+"HDR" = "Wyłącz HDR";
+"HDR_DESC" = "Wyłącza HDR w niektórych filmach.";

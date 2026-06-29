@@ -1,0 +1,34 @@
+"RESTART_BAR" = "Eventuelle endringer i disse innstillingene krever at appen startes på nytt for å tre i kraft.";
+"USE_VP9_OR_AV1" = "Bruk VP9 og AV1";
+"USE_VP9_OR_AV1_DESC" = "Aktiver VP9- og AV1-kodeker som støtter videoer opptil 4K-oppløsning.";
+
+"USE_VP9" = "Bruk VP9";
+"USE_VP9_DESC" = "Aktiver VP9-kodeken som støtter videoer opptil 4K-oppløsning.";
+
+"USE_AV1" = "Bruk AV1";
+"USE_AV1_DESC" = "Aktiver AV1-kodeken som støtter videoer opptil 4K-oppløsning.";
+
+"CODEC" = "Kodek";
+"CODEC_DESC" = "Du kan velge hvilken kodek du vil bruke i videoer.";
+"BOTH" = "Begge";
+
+"DECODE_THREADS" = "Dekodingstråder";
+"DECODE_THREADS_DESC" = "Antall tråder som brukes til VP9-videodekoding. Høyere verdier kan forbedre videoavspillingsytelsen, men kan også øke batteriforbruket.";
+"DECODE_THREADS_DEFAULT_VALUE" = "Standardverdi";
+
+"OP_BAR" = "VP9-optimaliseringer";
+"SKIP_LOOP_FILTER" = "Hopp over loop-filter";
+"LOOP_FILTER_OPTIMIZATION" = "Loop-filter-optimalisering";
+"ROW_THREADING" = "Radthreading";
+
+"AUTO_RELOAD" = "Last inn fastlåste videoer automatisk på nytt";
+"AUTO_RELOAD_DESC" = "Når dette alternativet er aktivert, vil fastlåste videoer automatisk lastes inn på nytt hvert 2,5 sekund.";
+"RELOAD_BUTTON" = "Legg til oppdateringsknapp";
+"RELOAD_BUTTON_DESC" = "Legger til en oppdateringsknapp i videooverlayet. Du kan konfigurere knappen i YTVideoOverlay-tweaken.";
+"POSITION" = "Plassering av oppdateringsknappen";
+
+"EXTRA" = "Ekstrafunksjoner";
+"FIX_PLAYBACK" = "Fiks avspillingsproblemer";
+"FIX_PLAYBACK_DESC" = "Fikser videoavspillingsproblemer for enkelte brukere. Ved å slå på dette deaktiveres VP9 og AV1. I tillegg er videokvaliteten begrenset til 1080p og HDR fjernes.";
+"HDR" = "Deaktiver HDR";
+"HDR_DESC" = "Deaktiverer HDR i enkelte videoer.";

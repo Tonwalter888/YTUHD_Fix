@@ -1,0 +1,34 @@
+"RESTART_BAR" = "Änderungen an diesen Einstellungen erfordern einen Neustart der App, um wirksam zu werden.";
+"USE_VP9_OR_AV1" = "VP9 und AV1 verwenden";
+"USE_VP9_OR_AV1_DESC" = "VP9- und AV1-Codecs aktivieren, die Videos bis zu einer 4K-Auflösung unterstützen.";
+
+"USE_VP9" = "VP9 verwenden";
+"USE_VP9_DESC" = "Aktiviert den VP9-Codec, der Videos bis zu einer 4K-Auflösung unterstützt.";
+
+"USE_AV1" = "AV1 verwenden";
+"USE_AV1_DESC" = "Aktiviert den AV1-Codec, der Videos bis zu einer 4K-Auflösung unterstützt.";
+
+"CODEC" = "Codec";
+"CODEC_DESC" = "Sie können den Codec auswählen, den Sie in Videos verwenden möchten.";
+"BOTH" = "Beide";
+
+"DECODE_THREADS" = "Dekodierungs-Threads";
+"DECODE_THREADS_DESC" = "Anzahl der Threads, die für die VP9-Videodekodierung verwendet werden. Höhere Werte können die Videowiedergabeleistung verbessern, aber auch den Akkuverbrauch erhöhen.";
+"DECODE_THREADS_DEFAULT_VALUE" = "Standardwert";
+
+"OP_BAR" = "VP9-Optimierungen";
+"SKIP_LOOP_FILTER" = "Schleifenfilter überspringen";
+"LOOP_FILTER_OPTIMIZATION" = "Schleifenfilter-Optimierung";
+"ROW_THREADING" = "Zeilen-Threading";
+
+"AUTO_RELOAD" = "Hängende Videos automatisch neu laden";
+"AUTO_RELOAD_DESC" = "Wenn diese Option aktiviert ist, werden hängende Videos alle 2,5 Sekunden automatisch neu geladen.";
+"RELOAD_BUTTON" = "Neuladen-Button hinzufügen";
+"RELOAD_BUTTON_DESC" = "Fügt einen Neuladen-Button zum Video-Overlay hinzu. Du kannst den Button im YTVideoOverlay-Tweak konfigurieren.";
+"POSITION" = "Position des Neuladen-Buttons";
+
+"EXTRA" = "Zusätzliche Funktionen";
+"FIX_PLAYBACK" = "Wiedergabeprobleme beheben";
+"FIX_PLAYBACK_DESC" = "Behebt Videowiedergabeprobleme für einige Benutzer. Durch das Aktivieren dieser Option werden VP9 und AV1 deaktiviert. Außerdem wird die Videoqualität auf 1080p begrenzt und HDR entfernt.";
+"HDR" = "HDR deaktivieren";
+"HDR_DESC" = "Deaktiviert HDR in einigen Videos.";

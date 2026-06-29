@@ -1,0 +1,34 @@
+"RESTART_BAR" = "Any changes to these settings are required to restart the app to take effect.";
+"USE_VP9_OR_AV1" = "Use VP9 and AV1";
+"USE_VP9_OR_AV1_DESC" = "Enable VP9 and AV1 codecs that support videos up to 4K resolution.";
+
+"USE_VP9" = "Use VP9";
+"USE_VP9_DESC" = "Enable the VP9 codec that supports videos up to 4K resolution.";
+
+"USE_AV1" = "Use AV1";
+"USE_AV1_DESC" = "Enable the AV1 codec that supports videos up to 4K resolution.";
+
+"CODEC" = "Codec";
+"CODEC_DESC" = "You can choose codec you want to use in videos.";
+"BOTH" = "Both";
+
+"DECODE_THREADS" = "Decode threads";
+"DECODE_THREADS_DESC" = "Number of threads used for VP9 video decoding. Higher values may improve video playback performance but may also increase battery consumption.";
+"DECODE_THREADS_DEFAULT_VALUE" = "Default value";
+
+"OP_BAR" = "VP9 Optimizations";
+"SKIP_LOOP_FILTER" = "Skip loop filter";
+"LOOP_FILTER_OPTIMIZATION" = "Loop filter optimization";
+"ROW_THREADING" = "Row threading";
+
+"AUTO_RELOAD" = "Auto reload stuck videos";
+"AUTO_RELOAD_DESC" = "Turning this option on will auto reload stuck video every 2.5 seconds."; 
+"RELOAD_BUTTON" = "Adds a reload button";
+"RELOAD_BUTTON_DESC" = "Adds a reload button to the video overlay, you can config the button in YTVideoOverlay tweak.";
+"POSITION" = "Reload button position";
+
+"EXTRA" = "Extra features";
+"FIX_PLAYBACK" = "Fix playback issues";
+"FIX_PLAYBACK_DESC" = "Fix video playback issues for some users. Turning this on will disable VP9 and AV1. Plus the video quality is limited to 1080p and HDR is removed.";
+"HDR" = "Disables HDR";
+"HDR_DESC" = "Disables HDR in some videos.";

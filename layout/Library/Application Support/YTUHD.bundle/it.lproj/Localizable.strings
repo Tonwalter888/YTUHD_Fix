@@ -1,0 +1,34 @@
+"RESTART_BAR" = "Qualsiasi modifica a queste impostazioni richiede il riavvio dell'app per avere effetto.";
+"USE_VP9_OR_AV1" = "Usa VP9 e AV1";
+"USE_VP9_OR_AV1_DESC" = "Abilita i codec VP9 e AV1 che supportano video con risoluzione fino a 4K.";
+
+"USE_VP9" = "Usa VP9";
+"USE_VP9_DESC" = "Abilita il codec VP9 che supporta video con risoluzione fino a 4K.";
+
+"USE_AV1" = "Usa AV1";
+"USE_AV1_DESC" = "Abilita il codec AV1 che supporta video con risoluzione fino a 4K.";
+
+"CODEC" = "Codec";
+"CODEC_DESC" = "Puoi scegliere il codec che desideri utilizzare nei video.";
+"BOTH" = "Entrambi";
+
+"DECODE_THREADS" = "Thread di decodifica";
+"DECODE_THREADS_DESC" = "Numero di thread utilizzati per la decodifica video VP9. Valori più alti possono migliorare le prestazioni di riproduzione video ma possono anche aumentare il consumo della batteria.";
+"DECODE_THREADS_DEFAULT_VALUE" = "Valore predefinito";
+
+"OP_BAR" = "Ottimizzazioni VP9";
+"SKIP_LOOP_FILTER" = "Salta il filtro di loop";
+"LOOP_FILTER_OPTIMIZATION" = "Ottimizzazione del filtro di loop";
+"ROW_THREADING" = "Threading delle righe";
+
+"AUTO_RELOAD" = "Ricarica automaticamente i video bloccati";
+"AUTO_RELOAD_DESC" = "Attivando questa opzione, il video bloccato verrà ricaricato automaticamente ogni 2,5 secondi.";
+"RELOAD_BUTTON" = "Aggiungi pulsante di ricarica";
+"RELOAD_BUTTON_DESC" = "Aggiunge un pulsante di ricarica all’overlay del video; puoi configurarlo nel tweak YTVideoOverlay.";
+"POSITION" = "Posizione del pulsante di ricarica";
+
+"EXTRA" = "Funzionalità extra";
+"FIX_PLAYBACK" = "Risolvi i problemi di riproduzione";
+"FIX_PLAYBACK_DESC" = "Risolve i problemi di riproduzione video per alcuni utenti. L'attivazione di questa opzione disabiliterà VP9 e AV1. Inoltre, la qualità video è limitata a 1080p e l'HDR viene rimosso.";
+"HDR" = "Disabilita HDR";
+"HDR_DESC" = "Disabilita l'HDR in alcuni video.";

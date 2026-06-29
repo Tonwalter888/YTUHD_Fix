@@ -1,0 +1,28 @@
+# YTUHD
+Unlocks 1440p (2K) and 2160p (4K) resolutions in iOS YouTube app.
+This requried at least iOS 11 and recommend at least A12 chip for the best 2K and 4K experience.
+
+## Known issues
+- Some videos may not playable in SW VP9.
+- And some videos may not get 4K in SW AV1.
+
+## Tip
+- iPhone 15 Pro and higher or any devices that have HW AV1 can get 4K without YTUHD.
+
+## Backstory
+- The reason I created this repo because the latest version of YTUHD have some problems with libundirect that can't unlock 4K if you're sideloading.
+- And in main YTUHD repo,PoomSmart try to make 2K and 4K work in older devices (older than A12 chip) but libundirect doesn't work with sideloading. (maybe)
+- If anyone can make libundirect works in sideloading, PLEASE open a new issue and explain how you did it.
+- I fixed All VP9 not working, fixed settings crashes and updated some codes from PoomSmart and other contributors so now 2K and 4K videos should playing fine.
+- I also added some new features that OG YTUHD doesn't have, eg. Remove Premium video quality.
+- Maybe this repo might help you! If you find any bugs, you can open a new issue or make a PR to here.
+
+## Building
+1. Clone [Theos](https://github.com/theos/theos) along with its submodules and set your theos path in ``$THEOS`` value.
+2. Clone and copy [iOS 18.6 SDK](https://github.com/Tonwalter888/iOS-18.6-SDK) to ``$THEOS/sdks``.
+3. Clone [YouTubeHeader](https://github.com/PoomSmart/YouTubeHeader) and [PSHeader](https://github.com/PoomSmart/PSHeader) into ``$THEOS/include``.
+4. Clone [YTVideoOverlay](https://github.com/PoomSmart/YTVideoOverlay) outside the tweak folder.
+5. Clone this repo, cd into it and run
+- ``make clean package DEBUG=0 FINALPACKAGE=1`` For rootful jailbroken iOS (iOS <15 - checkra1n, Cydia)
+- ``make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless`` For rootless jailbroken iOS (iOS 15+ - palera1n, Sileo, Zebra, Dolpamine, bakera1n, TrollStore)
+- ``make clean package DEBUG=0 FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=roothide`` For roothide jailbroken iOS (iOS 15 - Dolpamine, Bootstrap)

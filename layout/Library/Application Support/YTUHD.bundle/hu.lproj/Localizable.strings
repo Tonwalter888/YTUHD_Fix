@@ -1,0 +1,34 @@
+"RESTART_BAR" = "Ezen beállítások módosításainak érvénybe lépéséhez újra kell indítani az alkalmazást.";
+"USE_VP9_OR_AV1" = "VP9 és AV1 használata";
+"USE_VP9_OR_AV1_DESC" = "Engedélyezze a VP9 és AV1 kodekeket, amelyek akár 4K felbontású videókat is támogatnak.";
+
+"USE_VP9" = "VP9 használata";
+"USE_VP9_DESC" = "Engedélyezze a VP9 kodeket, amely akár 4K felbontású videókat is támogat.";
+
+"USE_AV1" = "AV1 használata";
+"USE_AV1_DESC" = "Engedélyezze az AV1 kodeket, amely akár 4K felbontású videókat is támogat.";
+
+"CODEC" = "Kodek";
+"CODEC_DESC" = "Kiválaszthatja a videókban használni kívánt kodeket.";
+"BOTH" = "Mindkettő";
+
+"DECODE_THREADS" = "Dekódolási szálak";
+"DECODE_THREADS_DESC" = "A VP9 videó dekódolásához használt szálak száma. A magasabb értékek javíthatják a videólejátszás teljesítményét, de növelhetik az akkumulátor fogyasztását is.";
+"DECODE_THREADS_DEFAULT_VALUE" = "Alapértelmezett érték";
+
+"OP_BAR" = "VP9 optimalizálások";
+"SKIP_LOOP_FILTER" = "Ciklusszűrő kihagyása";
+"LOOP_FILTER_OPTIMIZATION" = "Ciklusszűrő optimalizálása";
+"ROW_THREADING" = "Sorszálazás";
+
+"AUTO_RELOAD" = "Beragadt videók automatikus újratöltése";
+"AUTO_RELOAD_DESC" = "Ha ez a beállítás be van kapcsolva, a beragadt videó automatikusan újratöltődik 2,5 másodpercenként.";
+"RELOAD_BUTTON" = "Újratöltés gomb hozzáadása";
+"RELOAD_BUTTON_DESC" = "Újratöltés gombot ad a videó overlayhez, a gombot a YTVideoOverlay tweakben állíthatod be.";
+"POSITION" = "Újratöltés gomb helye";
+
+"EXTRA" = "Extra funkciók";
+"FIX_PLAYBACK" = "Lejátszási problémák javítása";
+"FIX_PLAYBACK_DESC" = "Javítja a videólejátszási problémákat néhány felhasználó számára. Ennek bekapcsolása letiltja a VP9 és AV1 kódolást. Ezenkívül a videó minősége 1080p-re korlátozódik, és a HDR el lesz távolítva.";
+"HDR" = "HDR letiltása";
+"HDR_DESC" = "Letiltja a HDR-t bizonyos videókban.";
