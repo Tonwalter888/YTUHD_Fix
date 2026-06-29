@@ -48,6 +48,7 @@
 #import <YouTubeHeader/MLPlayerPoolImpl.h>
 #import <YouTubeHeader/MLVideoDecoderFactory.h>
 #import <YouTubeHeader/YTHotConfig.h>
+#import <YouTubeHeader/YTIMediaCommonConfig.h>
 #import "Header.h"
 
 extern BOOL FixPlayback();
@@ -69,12 +70,8 @@ extern BOOL FixPlayback();
 - (YTIHamplayerConfig *)hamplayerConfig;
 @end
 
-@interface YTIMediaCommonConfig : GPBMessage
+@interface YTIMediaCommonConfig (YTUHD)
 - (void)setUseServerDrivenAbr:(BOOL)arg;
-@end
-
-@interface YTIHamplayerConfig (YTUHD)
-- (int)renderViewType;
 @end
 
 __attribute__((unused))
