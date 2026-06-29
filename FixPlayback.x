@@ -189,14 +189,13 @@ static void YTUHDDump(MLVideo *video, MLInnerTubePlayerConfig *config) {
         // one level deeper (config → playerConfig → context/client → fields).
         [buf appendString:@"\n=== Client Context Deep Probe ===\n"];
         @try {
-            id pc = [config valueForKey:@"playerConfig"];
-            if (!pc) pc = [config valueForKey:@"_playerConfig"];
+            YTIPlayerConfig *pc = [config valueForKey:@"_playerConfig"];
             [buf appendFormat:@"playerConfig class: %@\n",
                 NSStringFromClass([pc class])];
             // Candidate key names for the client/context sub-object
-            for (NSString *key in @[@"context", @"clientContext", @"client",
-                                    @"innerTubeContext", @"requestContext",
-                                    @"clientInfo"]) {
+            for (NSString *key in @[@"_context", @"_clientContext", @"_client",
+                                    @"_innerTubeContext", @"_requestContext",
+                                    @"_clientInfo"]) {
                 id ctx = nil;
                 @try { ctx = [pc valueForKey:key]; } @catch (...) { continue; }
                 if (!ctx) continue;
@@ -380,8 +379,8 @@ static void ytuhd_injectHLSURL(MLStreamingData *sd, NSString *urlString) {
 
     // Strategy 1: known ivar key names.
     for (NSString *key in @[@"_streamingData", @"_proto", @"_data",
-                             @"streamingData",  @"innerStreamingData",
-                             @"ytStreamingData", @"_ytStreamingData"]) {
+                             @"_streamingData",  @"_innerStreamingData",
+                             @"_ytStreamingData", @"_ytStreamingData"]) {
         @try {
             id inner = [sd valueForKey:key];
             if (inner && [inner respondsToSelector:setter]) {
@@ -637,6 +636,19 @@ static NSURLSession *YTUHDPlayerSession(void) {
 
 @end
 
+@interface YTIPlayerConfig : GPBMessage
+- (YTIMediaCommonConfig *)mediaCommonConfig;
+- (YTIHamplayerConfig *)hamplayerConfig;
+@end
+
+@inteface YTIMediaCommonConfig : GPBMessage
+- (void)setUseServerDrivenAbr:(BOOL)arg;
+@end
+
+@interface YTIHamplayerConfig (YTUHD)
+- (int)renderViewType;
+@end
+
 %hook MLPlayerPoolImpl
 
 // With TVHTML5 /player response: hlsManifestUrl is populated,
@@ -645,18 +657,14 @@ static NSURLSession *YTUHDPlayerSession(void) {
 - (id)acquirePlayerForVideo:(MLVideo *)video playerConfig:(MLInnerTubePlayerConfig *)playerConfig stickySettings:(MLPlayerStickySettings *)stickySettings latencyLogger:(id)latencyLogger reloadContext:(id)reloadContext mediaPlayerResources:(id)mediaPlayerResources recompositeProvider:(id)recompositeProvider {
     YTUHDDump(video, playerConfig);
     @try {
-        id pc  = [playerConfig valueForKey:@"playerConfig"];
-        id mcc = [pc respondsToSelector:@selector(mediaCommonConfig)]
-                     ? [pc mediaCommonConfig]
-                     : [pc valueForKey:@"mediaCommonConfig"];
-        if ([mcc respondsToSelector:@selector(setUseServerDrivenAbr:)])
-            [mcc setUseServerDrivenAbr:NO];
+        YTIPlayerConfig *pc  = [playerConfig valueForKey:@"_playerConfig"];
+        YTIMediaCommonConfig *mcc = pc.mediaCommonConfig;
+        [mcc setUseServerDrivenAbr:NO];
         // Force AVPlayer mode: TVHTML5 response provides hlsManifestUrl.
         // renderViewType=2 makes the pool create MLAVPlayer (not HAMPlayer),
         // which uses hlsManifestUrl directly — no DASH / no spc= required.
-        id hc = [pc valueForKey:@"hamplayerConfig"];
-        if ([hc respondsToSelector:@selector(setRenderViewType:)])
-            [hc setRenderViewType:2];
+        YTIHamplayerConfig *hc = pc.hamplayerConfig;
+        hc.renderViewType = 2;
     } @catch (...) {}
     return %orig;
 }
@@ -680,18 +688,14 @@ static NSURLSession *YTUHDPlayerSession(void) {
 - (id)acquirePlayerForVideo:(MLVideo *)video playerConfig:(MLInnerTubePlayerConfig *)playerConfig stickySettings:(MLPlayerStickySettings *)stickySettings latencyLogger:(id)latencyLogger reloadContext:(id)reloadContext mediaPlayerResources:(id)mediaPlayerResources recompositeProvider:(id)recompositeProvider {
     YTUHDDump(video, playerConfig);
     @try {
-        id pc  = [playerConfig valueForKey:@"playerConfig"];
-        id mcc = [pc respondsToSelector:@selector(mediaCommonConfig)]
-                     ? [pc mediaCommonConfig]
-                     : [pc valueForKey:@"mediaCommonConfig"];
-        if ([mcc respondsToSelector:@selector(setUseServerDrivenAbr:)])
-            [mcc setUseServerDrivenAbr:NO];
+        YTIPlayerConfig *pc  = [playerConfig valueForKey:@"_playerConfig"];
+        YTIMediaCommonConfig *mcc = pc.mediaCommonConfig;
+        [mcc setUseServerDrivenAbr:NO];
         // Force AVPlayer mode: TVHTML5 response provides hlsManifestUrl.
         // renderViewType=2 makes the pool create MLAVPlayer (not HAMPlayer),
         // which uses hlsManifestUrl directly — no DASH / no spc= required.
-        id hc = [pc valueForKey:@"hamplayerConfig"];
-        if ([hc respondsToSelector:@selector(setRenderViewType:)])
-            [hc setRenderViewType:2];
+        YTIHamplayerConfig *hc = pc.hamplayerConfig;
+        hc.renderViewType = 2;
     } @catch (...) {}
     return %orig;
 }
